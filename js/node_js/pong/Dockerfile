@@ -1,8 +1,10 @@
 FROM node:10.15-alpine
 
-COPY . /app/
+COPY package.json /app/package.json
 
-RUN cd /app && npm install
+RUN cd /app/ && npm install
+
+COPY . /app/
 
 WORKDIR /app
 
