@@ -1,0 +1,18 @@
+# Image de base
+FROM node:8.11-alpine
+
+# Copie de la liste des dependances
+COPY package.json /app/package.json
+
+#Installation / compilation des dependances
+RUN cd /app && npm install
+
+COPY . /app/
+
+WORKDIR /app
+
+# Port d'écoute
+EXPOSE 80
+
+# Commande à lancer
+CMD ["npm", "start"]
