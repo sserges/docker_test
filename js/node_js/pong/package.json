@@ -6,6 +6,6 @@
 		"start": "node pong.js"
 	},
 	"dependencies": {
-		"express": "^4.14.0"
+		"express": "^4.18.2"
 	}
 }
